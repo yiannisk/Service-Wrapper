@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ServiceWrapper.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServiceName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ExampleService2</Value>
+    </Setting>
+    <Setting Name="ServiceAccount" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LocalSystem</Value>
+    </Setting>
+    <Setting Name="AccountUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AccountPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ServiceStartMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Automatic</Value>
+    </Setting>
+    <Setting Name="EventLog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Application</Value>
+    </Setting>
+    <Setting Name="Debug" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ServiceDescription" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">An example service that outlines a basic Windows service wrapper</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

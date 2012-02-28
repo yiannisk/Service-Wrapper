@@ -23,6 +23,7 @@ namespace ServiceWrapper
 		}
 
 		private bool Verbose { get; set; }
+
 		internal ServiceInstallHelper(bool verbose)
 		{
 			Verbose = verbose;
@@ -36,16 +37,16 @@ namespace ServiceWrapper
 			catch (FileNotFoundException exception)
 				{ throw new Exception("Could not install service", exception); }
 
-			var proc = Process.Start(processStartInfo);
-			proc.WaitForExit();
+			var process = Process.Start(processStartInfo);
+			process.WaitForExit();
 
 			if (!Verbose) return;
 
 			File.WriteAllText("servinst.log", 
 				"INSTALLATION OUTPUT: \n" 
-					+ proc.StandardOutput.ReadToEnd()
+					+ process.StandardOutput.ReadToEnd()
 					+ "\nINSTALLATION ERRORS: \n"
-					+ proc.StandardError.ReadToEnd());
+					+ process.StandardError.ReadToEnd());
 
 			Console.WriteLine("Installation complete. Placed installation log in [servinst.log].");
 		}
@@ -72,7 +73,7 @@ namespace ServiceWrapper
 			Console.WriteLine("Uninstallation complete. Placed uninstallation log in [servuninst.log].");
 		}
 
-		protected virtual ProcessStartInfo GetProcessStartInfoTemplate(string args)
+		public virtual ProcessStartInfo GetProcessStartInfoTemplate(string args)
 		{
 			var dir = ToolLocationHelper.GetPathToDotNetFramework(TargetDotNetFrameworkVersion.Version40);
 			if (dir == null)

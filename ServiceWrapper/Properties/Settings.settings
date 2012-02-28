@@ -26,5 +26,11 @@
     <Setting Name="ServiceDescription" Type="System.String" Scope="Application">
       <Value Profile="(Default)">An example service that outlines a basic Windows service wrapper</Value>
     </Setting>
+    <Setting Name="ServiceProviderPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ExampleProvider.dll</Value>
+    </Setting>
+    <Setting Name="ServiceProviderName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SimpleProvider</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

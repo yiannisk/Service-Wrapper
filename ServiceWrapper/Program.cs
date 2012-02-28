@@ -1,6 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.ServiceProcess;
-using Ninject;
 using log4net;
 
 namespace ServiceWrapper
@@ -26,7 +26,12 @@ namespace ServiceWrapper
 				return;
 			}
 
-			ServiceBase.Run(new ServiceWrapper());
+			try { ServiceBase.Run(new ServiceWrapper()); }
+			catch (Exception exception)
+			{
+				Log.Error("Service could not start.", exception);
+			}
+			
 		}
 	}
 }

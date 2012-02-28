@@ -94,5 +94,23 @@ namespace ServiceWrapper.Properties {
                 return ((string)(this["ServiceDescription"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ExampleProvider.dll")]
+        public string ServiceProviderPath {
+            get {
+                return ((string)(this["ServiceProviderPath"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SimpleProvider")]
+        public string ServiceProviderName {
+            get {
+                return ((string)(this["ServiceProviderName"]));
+            }
+        }
     }
 }

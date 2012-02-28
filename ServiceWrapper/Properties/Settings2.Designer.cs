@@ -25,7 +25,7 @@ namespace ServiceWrapper.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ExampleService2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Example Service 2")]
         public string ServiceName {
             get {
                 return ((string)(this["ServiceName"]));
